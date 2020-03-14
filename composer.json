@@ -1,0 +1,11 @@
+{
+  "require": {
+    "codeitnowin/barcode": "^3.0"
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://php.cnpkg.org"
+    }
+  }
+}
