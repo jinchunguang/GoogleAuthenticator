@@ -16,7 +16,7 @@ echo "安全密匙: " . $secret . "<br><br>";
 
 
 //第一个参数是"标识",第二个参数为"安全密匙SecretKey" 生成二维码信息
-$qrCode = $ga->getQRCodeGoogleImage('www.xxx.com', $secret);
+$qrCode = $ga->getQRCodeGoogleImage('www.baidu.com', $secret, 'UC-SECRET');
 echo '<img src="data:' . $qrCode->getContentType() . ';base64,' . $qrCode->generate() . '" />';
 
 

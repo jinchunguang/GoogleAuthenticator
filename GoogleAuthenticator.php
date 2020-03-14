@@ -129,17 +129,17 @@ class GoogleAuthenticator
      *
      * @return string
      */
-    public function getQRCodeGoogleImage($name, $secret)
+    public function getQRCodeGoogleImage($name, $secret, $label)
     {
 
         $qrCode = new QrCode();
-        $text='otpauth://totp/' . $name . '?secret=' . $secret ;
+        $text = 'otpauth://totp/' . $name . '?secret=' . $secret;
         $qrCode->setText($text)
             ->setSize(200)
             ->setPadding(10)
             ->setErrorCorrection('0')
             ->setLabelFontSize(16)
-            ->setLabel('UC-Secret')
+            ->setLabel($label)
             ->setImageType(QrCode::IMAGE_TYPE_PNG);
         return $qrCode;
 
